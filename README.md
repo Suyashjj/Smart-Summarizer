@@ -54,7 +54,7 @@ Built with Next.js 15 App Router, Clerk for Auth, React, ollama 3, Langchain, Sh
 
 ## 🙏 Acknowledgements
 
-- [Clerk](https://go.clerk.com/5q0WFA) for authentication
+- [Clerk](https://go.clerk.com/5q0WFA) for authenticationgit
 - [Langchain](https://js.langchain.com) for document processing
 - [ShadCN UI](https://ui.shadcn.com) for components
 
