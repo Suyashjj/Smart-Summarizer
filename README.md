@@ -38,7 +38,7 @@ Built with Next.js 15 App Router, Clerk for Auth, React, ollama 3, Langchain, Sh
 
 2. Copy the .env.example variables into a separate .env.local file
 3. Create the required credentials:  
-   – OpenAI API key  
+   – Ollama API key  
    – Clerk authentication  
    – UploadThing configuration  
    – Stripe payment setup  
