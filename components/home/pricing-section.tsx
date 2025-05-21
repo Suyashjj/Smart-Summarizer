@@ -1,10 +1,9 @@
 "use client"
 
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { CheckIcon, ArrowRightIcon } from "lucide-react";
-import { useState, useEffect } from "react";
 import Script from "next/script";
+import { useRazorpay } from "@/lib/useRazorpay";
 
 declare global {
   interface Window {
@@ -77,62 +76,7 @@ const plans = [
 ];
   
 const PricingCard = ({name, price, description, items, id}: PriceType) => {
-  const [isProcessing, setIsProcessing] = useState(false);
-
-  const handlePayment = async () => {
-    setIsProcessing(true);
-
-    try {
-      // Create order with the exact price from the plan
-      const response = await fetch("/api/create-order", { 
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          planId: id,
-          amount: price // This will be 149 for Basic or 249 for Pro
-        })
-      });
-      
-      const data = await response.json();
-
-      if (!data.orderId) {
-        throw new Error("Failed to create order");
-      }
-
-      const options: RazorpayOptions = {
-        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY!,
-        amount: price * 100, // Amount in paisa
-        currency: "INR",
-        name: "Smart Summarizer",
-        description: `Payment for ${name} Plan`,
-        order_id: data.orderId,
-        handler: function(response: RazorpayResponse) {
-          // Handle successful payment
-          console.log("Payment successful:", response);
-          // Redirect to home page after successful payment
-          window.location.href = "/";
-        },
-        prefill: {
-          name: "",
-          email: "",
-          contact: "",
-        },
-        theme: {
-          color: "#f43f5e", // Rose color to match your UI
-        },
-      };    
-
-      const razorpay = new window.Razorpay(options);  
-      razorpay.open();
-    } catch (error) {
-      console.error("Error initiating payment:", error);
-      alert("Payment initialization failed. Please try again.");
-    } finally {
-      setIsProcessing(false);
-    }
-  };
+  const { handlePayment, isProcessing } = useRazorpay({ id, name, price });
 
   return (
     <div className="relative w-full max-w-lg hover:scale-105 transition-all duration-300">
