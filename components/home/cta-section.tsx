@@ -21,7 +21,7 @@ export default function CTASection() {
                                  variant = {'link'} 
                                  className="w-full min-[400px]:w-auto bg-linear-to-r from-slate-900 to-rose-500 text-white hover:bg-rose-500 hover:text-white transition-all duration-300">
                                 <Link 
-                                    href="/sign-in" 
+                                    href="/pricing" 
                                     className="flex items-center justify-center">
                                 Get Started{''}
                                 <ArrowRight className="ml-2 h-4 w-4 animate-pulse" />
