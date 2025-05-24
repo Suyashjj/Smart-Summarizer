@@ -3,7 +3,7 @@
 Built with Next.js 15 App Router, Clerk for Auth, React, ollama 3, Langchain, ShadCN UI components, Tailwind CSS 4, NeonDB, UploadThing, Razorpay for payments, TypeScript, TailwindCSS and more.
 
 <p align="center">
-  <img src="/Screenshot%20(482).png" alt="Smart Summarizer Screenshot 1" width="800"/>
+  <img src="public/Screenshot (482).png" alt="Smart Summarizer Screenshot 1" width="800"/>
 </p>
 
 ## Features
