@@ -1,5 +1,7 @@
 # Smart-Summarizer – Transform PDFs into a beautiful reel of impactful summaries with the power of AI!
 
+**Live Demo:** [https://smart-summarizer-h6t214je8-suyashjjs-projects.vercel.app/](https://smart-summarizer-h6t214je8-suyashjjs-projects.vercel.app/)
+
 Built with Next.js 15 App Router, Clerk for Auth, React, ollama 3, Langchain, ShadCN UI components, Tailwind CSS 4, NeonDB, UploadThing, Razorpay for payments, TypeScript, TailwindCSS and more.
 
 <p align="center">
