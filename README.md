@@ -35,7 +35,7 @@ Built with Next.js 15 App Router, Clerk for Auth, React, ollama 3, Langchain, Sh
 - 🚀 Real-time updates and path revalidation
 - 🛠️ Production-ready deployment
 - 🔔 Toast notifications for upload status, processing updates, and error handling
-- ⚙️ Performance optimizations
+- ⚙️ Performance optimization
 - 🔍 SEO-friendly summary generation
 
 ## ✨ Getting Started
